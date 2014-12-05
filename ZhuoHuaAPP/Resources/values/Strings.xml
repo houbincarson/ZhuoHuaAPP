@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">BatarHeHe</string>
+	    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">释放立即刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新...</string>
+    <string name="pull_to_refresh_tap_label">点击刷新</string>
+  <string name="tv_Company">公司名称</string>
+  <string name="tv_tdOrderCount">今日订单总量</string>
+  <string name="tv_tdOrderPrice">今日订单总额</string>
+  <string name="tv_tdProductCount">今日生产总量</string>
+  <string name="tv_tdSendOutCount">今日发货总量</string>
+  <string name="tv_tdStoreCount">今日库存总量</string>
+  <string name="tv_tdReceivable">今日应收总额</string>
+  <string name="tv_tdPayable">今日应付总额</string>
+  <string name="tv_NoCheckOrderCount">未审核订单数量</string>
+  <string name="tv_PurchaseQuotationCount">采购报价单数量</string>
+  <string name="tv_SaleQuotationCount">销售报价单数量</string>
+  <string name="tv_SalebookCount">销售预订单数量</string>
+  <string name="tv_title_Product">生产查询</string>
+  <string name="tv_title_Sale">销售查询</string>
+  <string name="tv_title_Finance">财务查询</string>
+  <string name="tv_title_Query">其他查询</string>
+  <string name="tv_test_Data">100.00</string>
+</resources>

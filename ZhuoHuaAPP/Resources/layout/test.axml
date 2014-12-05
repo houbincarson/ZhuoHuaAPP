@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<!-- 头部 -->
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_top"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/view_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF00ff00"
+            android:text="顶部标题" />
+    </RelativeLayout>
+<!-- 底部 -->
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_bottom"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+        <Button
+            android:id="@+id/Button_goMain"
+            android:text="底部按钮"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+<!-- 中部 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/RelativeLayout_bottom"
+        android:layout_below="@+id/RelativeLayout_top">
+    <!-- 中部左侧栏 -->
+        <RelativeLayout
+            android:id="@+id/RelativeLayout_middleleft"
+            android:orientation="vertical"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:background="#1d2152"
+            android:layout_alignParentLeft="true"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/view_middleleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF00cc00"
+                android:text="左侧标题         " />
+        </RelativeLayout>
+    <!-- 中部主框架 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#eeccee"
+            android:gravity="center"
+            android:layout_toRightOf="@id/RelativeLayout_middleleft">
+            <TextView
+                android:id="@+id/view_middle_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000066"
+                android:text="主面板标题" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" target-densitydpi="device-dpi" />
+    <title>Document</title>
+    <script src="ichart.1.2.min.js" type="text/javascript" charset="utf-8"> </script>
+    <script type="text/javascript" charset="utf-8">
+    </script>
+</head>
+<body onload="javascript:myObject.init()">
+    <div id='canvasDiv'>
+    </div>
+</body>
+<script type="text/javascript" charset="utf-8">
+
+    var mdata;
+    var w;
+    var h;
+
+    function setContactInfo(data) {
+        mdata = eval(data);   //通过eval方法处理得到json对象数组  
+        w = window.myObject.getW();
+        h = window.myObject.getH();
+        execute();
+    }
+
+    function execute() {
+        var chart = new iChart.Column2D({
+            render: 'canvasDiv', //渲染的Dom目标,canvasDiv为Dom的ID
+            title: 'Hello World\'s Height In Alphabet', //设置标题
+            data: mdata, //绑定数据
+            width: w-20, //设置宽度，默认单位为px
+            height: h-85, //设置高度，默认单位为px
+            // shadow:true,//激活阴影
+            // shadow_color:'#c7c7c7',//设置阴影颜色
+            border: 0,
+            offsetx: 10,
+            offsety: 10,
+            animation_timing_function: 'easeIn',
+            coordinate: {//配置自定义坐标轴
+                scale: [{//配置自定义值轴
+                    position: 'left', //配置左值轴	
+                    start_scale: 0, //设置开始刻度为0
+                    end_scale: 26, //设置结束刻度为26
+                    scale_space: 2, //设置刻度间距
+                    listeners: {//配置事件
+                        parseText: function (t, x, y) {//设置解析值轴文本
+                            return { text: t + " cm" }
+                        }
+                    }
+                }]
+            },
+            sub_option: {
+                listeners: {
+                    click: function (r, e, m) {
+                        window.myObject.setValue(r.get('name'), r.get('value'));
+                    }
+                }
+            }
+        });
+        //调用绘图方法开始绘图
+        chart.draw();
+    }
+</script>
+</html>

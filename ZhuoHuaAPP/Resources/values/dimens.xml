@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="title_size">24.0sp</dimen>
+  <dimen name="body_size">20.0sp</dimen>
+  <dimen name="hander_size">12.0sp</dimen>
+  <dimen name="title_padding">5dip</dimen>
+  <dimen name="body_padding">1dip</dimen>
+  <dimen name="hander_padding">2dip</dimen>
+</resources>

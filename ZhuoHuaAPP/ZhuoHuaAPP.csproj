@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D8F6567-DF17-477D-BEBF-F27C5B38EA9D}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZhuoHuaAPP</RootNamespace>
+    <AssemblyName>ZhuoHuaAPP</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <JavaMaximumHeapSize />
+    <JavaOptions />
+    <AndroidUseLatestPlatformSdk />
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Json" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.cs" />
+    <Compile Include="BaseClassLibrary\AccessWebservice.cs" />
+    <Compile Include="BaseClassLibrary\ControlDataTable.cs" />
+    <Compile Include="HomePage.cs" />
+    <Compile Include="BaseClassLibrary\HttpDownloadFile.cs" />
+    <Compile Include="HttpImageView.cs" />
+    <Compile Include="JSinterface.cs" />
+    <Compile Include="login.cs" />
+    <Compile Include="BaseClassLibrary\ManageDevice.cs" />
+    <Compile Include="BaseClassLibrary\MessageBox.cs" />
+    <Compile Include="BaseClassLibrary\PullToRefreshListView.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerSetting.cs" />
+    <Compile Include="Splash.cs" />
+    <Compile Include="Web References\localhost\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="webviewActivity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\pull_to_refresh_header.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\login.axml" />
+    <AndroidResource Include="Resources\layout\homepage.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\test.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\homepage2.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\aboutus.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\webviewlayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\server.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <None Include="Web References\localhost\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\localhost\SimpDbServer.wsdl" />
+    <None Include="Web References\localhost\SimpDbServer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\SimpDbServer0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\SimpDbServer1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\SimpDbServer2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\index.html" />
+    <AndroidAsset Include="Assets\ichart.1.2.min.js" />
+    <AndroidAsset Include="Assets\hello.html" />
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_pulltorefresh_arrow.png" />
+    <AndroidResource Include="Resources\drawable\splash_background.xml" />
+    <AndroidResource Include="Resources\values\color.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable-ldpi\btn_check_off.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\btn_check_off_pressed.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\btn_check_off_selected.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\btn_check_on.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\btn_check_on_pressed.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\btn_check_on_selected.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\CunQian1.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\CunQian2.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\Exhibition1.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\Exhibition2.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\Exhibition3.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\Exhibition4.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\GoldStock1.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\GoldStock2.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\homepage1.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\homepage2.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_navigation_next_item_1.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\MapStore1.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\MapStore2.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\PicButton.ico" />
+    <AndroidResource Include="Resources\drawable-ldpi\qq_btn_check.xml" />
+    <AndroidResource Include="Resources\drawable-ldpi\Store1.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\Store2.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\Tab1.xml" />
+    <AndroidResource Include="Resources\drawable-ldpi\Tab2.xml" />
+    <AndroidResource Include="Resources\drawable-ldpi\Tab3.xml" />
+    <AndroidResource Include="Resources\drawable-ldpi\Tab4.xml" />
+    <AndroidResource Include="Resources\drawable-ldpi\Tab5.xml" />
+    <AndroidResource Include="Resources\drawable\borderBlue.xml" />
+    <AndroidResource Include="Resources\drawable\borderGray.xml" />
+    <AndroidResource Include="Resources\drawable\login_edit_borderBlue.xml" />
+    <AndroidResource Include="Resources\drawable\tileSelectorGreen.xml" />
+    <AndroidResource Include="Resources\drawable\borderBlue2.xml" />
+    <AndroidResource Include="Resources\drawable\splash1.png" />
+    <AndroidResource Include="Resources\drawable\splash2.jpg" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable\shape_top_corner_no_bottom_line.xml" />
+    <AndroidResource Include="Resources\drawable\shape_no_corner_without_bottom.xml" />
+    <AndroidResource Include="Resources\drawable\shape_bottom_corner_no_top_line.xml" />
+    <AndroidResource Include="Resources\drawable\q4.png" />
+    <AndroidResource Include="Resources\drawable\q1.png" />
+    <AndroidResource Include="Resources\drawable\q2.png" />
+    <AndroidResource Include="Resources\drawable\q3.png" />
+    <AndroidResource Include="Resources\drawable\sales.png" />
+    <AndroidResource Include="Resources\drawable\Query.png" />
+    <AndroidResource Include="Resources\drawable\product.png" />
+    <AndroidResource Include="Resources\drawable\finance.png" />
+    <AndroidResource Include="Resources\drawable\Img_SettingServer.png" />
+    <None Include="Web References\localhost\SimpDbServer.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:13124/SimpDbServer">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\localhost\</RelPath>
+      <UpdateFromURL>http://localhost:13124/SimpDbServer</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
